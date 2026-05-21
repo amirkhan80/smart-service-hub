@@ -18,6 +18,9 @@ function Navbar() {
   const [isAdmin, setIsAdmin] =
   useState(false);
 
+  const [menuOpen, setMenuOpen] =
+  useState(false);
+
   useEffect(() => {
 
     const user =
@@ -76,7 +79,28 @@ function Navbar() {
 
       </div>
 
-      <div className='nav-links'>
+      {/* MOBILE MENU BUTTON */}
+
+      <div
+        className='menu-icon'
+        onClick={() =>
+          setMenuOpen(!menuOpen)
+        }
+      >
+
+        ☰
+
+      </div>
+
+      <div
+        className={
+          menuOpen
+          ?
+          'nav-links active'
+          :
+          'nav-links'
+        }
+      >
 
         <Link to='/'>
           Home
