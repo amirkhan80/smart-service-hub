@@ -47,8 +47,6 @@ function Navbar() {
 
   }, []);
 
-  /* LOGOUT */
-
   const handleLogout = () => {
 
     localStorage.removeItem(
@@ -79,8 +77,6 @@ function Navbar() {
 
       </div>
 
-      {/* MOBILE MENU BUTTON */}
-
       <div
         className='menu-icon'
         onClick={() =>
@@ -95,10 +91,8 @@ function Navbar() {
       <div
         className={
           menuOpen
-          ?
-          'nav-links active'
-          :
-          'nav-links'
+            ? 'nav-links active'
+            : 'nav-links'
         }
       >
 
